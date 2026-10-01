@@ -1,5 +1,5 @@
 const app=document.querySelector('#app'),bar=document.querySelector('#bar');let step=0;const total=11;
-const go=(html,n=step+1)=>{step=n;bar.style.width=(step/total*100)+'%';app.innerHTML=`<section class="screen"><div class="card">${html}</div></section>`;scrollTo(0,0)};
+const go=(html,n=step)=>{step=n;bar.style.width=(step/total*100)+'%';app.innerHTML=`<section class="screen"><div class="card">${html}</div></section>`;scrollTo(0,0)};
 const btn=(t,fn='next()')=>`<button class="btn" onclick="${fn}">${t}</button>`;
 function next(){step++;render()}
 function render(){
